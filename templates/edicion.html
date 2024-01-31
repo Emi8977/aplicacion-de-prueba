@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<link rel="stylesheet" href="{{url_for('static', filename='estilo5.css')}}">
+
+		<title>Edicion de base de datos</title>
+		
+
+	</head>
+
+	<body id="cuerpo">
+		<div align="center">
+			<h1 id="titulo">Edicion de datos ingresados</h1>
+		</div>
+		
+		<div align="center">
+			<div id="caja_relleno">
+				{% for row in rows %}
+				<form  id="caja_relleno" action="/editrec" method="POST">
+					<h3 id="caja_letra" >Lenguaje:{{ row.id }}</h3>
+					
+					<input id="texto3" type="text" name="id" value="{{ row.id }}" placeholder="ID">
+					<br>
+					
+					<input id="texto3" type="text" name="nombre" value="{{ row.nombre }}" placeholder="Nombre">
+					
+					<br>
+					<input id="texto3" type="text" name="enfoque" value="{{ row.enfoque }}" placeholder="Enfoque"/>
+					
+					<br>
+					<input id="texto3" type="text" name="traductor" value="{{ row.traductor }}" placeholder="Traductor"/>
+					
+					<br>
+					<br>
+					<input id="texto4" type="submit" value="editar" /><br>
+				</form>
+				{% endfor %}	
+			</div>
+		</div>
+
+		<br>
+		<br>
+
+		<div align="center">
+			<form action="/" method="get">
+				<button id="texto4" type="submit" value="Regresa">Regresar a la Pagina Principal</button>
+			</form>
+		</div>
+		<br>
+		<br>
+	</body>
+
+</html>

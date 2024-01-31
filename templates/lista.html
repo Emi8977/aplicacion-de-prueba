@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<link rel="stylesheet" href="{{url_for('static', filename='estilo4.css')}}">
+
+		<title>Lista de Datos</title>
+		
+
+	</head>
+
+	<body id="cuerpo" align="center">
+		<div align="center">
+			<h1 id="titulo" >Lista de los Lenguajes de Programacion ingresados a la Base de Datos</h1>
+		</div>
+		
+	
+		
+	<!--	<form action="/lista" method="POST"> -->
+		<div align="center">
+			<h1 id="titulo2">Lista</h1>
+		</div>
+
+		<div align="center">
+			<div id="caja_relleno">
+			<table  border="1px">Tabla
+					<table border="1">
+						<thead>
+							<tr>
+								<th>id </th>
+								<th>Nombre</th>
+								<th>Enfoque</th>
+								<th>Traductor</th>
+							</tr>
+						</thead>
+					
+					
+					
+						{% for row in rows %}
+							<tr>
+								<td>{{ row.id }}</td>
+								<td>{{ row.nombre }}</td>
+								<td>{{ row.enfoque }}</td>
+								<td>{{ row.traductor}}</td>
+								
+								<td>
+									<form  action="/editar" method="POST">
+										<input type="hidden" name="id" value="{{ row.id }}">
+										<input id="texto4" type="submit" name="id" value="Editar" onclick="editar();">	
+									</form> 
+								</td>
+								
+								<td>
+									<form  action="/borrar" method="POST">
+									<input type="hidden" name="id" value="{{ row.id }}">
+									<input id="texto4" type="submit" name="id" value="borrar" onclick="borrar();">
+								</form> 
+								</td>
+							</tr>
+						{% endfor %}
+					</table>
+			</div>	
+		</div>
+				
+<!--	</form> -->
+		
+		
+		<br>
+		<br>
+		<div align="center">
+			<form action="/" method="get">
+				<button id="texto4" type="submit" value="Regresa">Regresar a la Pagina Principal</button>
+			</form>
+		</div>
+		<br>
+	</body>
+
+</html>

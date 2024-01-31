@@ -1,0 +1,54 @@
+*{
+    background: #574c4c;
+	margin: 0;
+	padding: 0;
+}
+#cuerpo{
+    
+	
+	margin: 0;
+	padding: 10mm;
+}
+
+#titulo{
+   
+    padding: 4%;
+    width: 30%;
+    color: white;
+    background: #a59393;
+}
+#texto{
+    padding: 0%;
+    
+    color: white;
+    background: #a59393;
+}
+/*cuafrado gris oscuro*/
+#caja_botonera{
+    padding: 4%;
+    width: 30%;
+    color: white;
+    background: #241b1b;
+}
+#formulario{
+    background: #241b1b;
+    
+}
+
+#cajita{
+    
+    background: #241b1b;
+}
+
+#ingresar{
+    color: white;
+    background-color: #0e0c0c;
+}
+#consultar{
+    color: white;
+    background: #0e0c0c;
+}
+#borrar{
+    color: white;
+    background: #0e0c0c;
+}

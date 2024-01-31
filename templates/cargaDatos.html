@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<title>Cargando Datos</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='estilo2.css')}}">
+
+	</head>
+
+	<body>
+		<div id="cuerpo" align="center">
+			<div>
+			<h1 id="texto" align="center">Ingrese un Lenguaje de programacion</h1>
+			</div>
+			
+			<div id="caja_relleno" align="center">
+				<form id="formulario" align="center" class="" action="/registrar" method="post">
+				
+					<h3 id="texto2">Ingrese los datos</h3>
+					<br>
+					<input id="texto3"  type="text" name="n" autocomplete="off" autofocus placeholder="Nombre">
+					<br>
+					<br>
+					<input id="texto3"  type="text" name="e" autocomplete="off" autofocus placeholder="Enfoque">
+					<br>
+					<br>
+					<input id="texto3"  type="text" name="t" autocomplete="off" autofocus placeholder="Traductor">
+					<br>
+					<br>
+					<input id="texto3"  type="submit" value="Cargar">
+				</form>
+			</div>
+			
+			<div id="caja2">
+			Estado: <label id="texto3"> {{ msg }} </label>
+			
+			<br>
+			<br>
+			
+			<textarea rows="4" cols="30">
+				{{ n1 }} : {{ e1 }} : {{ t1 }}
+			</textarea>
+			</div>
+			
+			<br>
+			
+			<div>
+			<form action="/" method="get">
+				<button id="texto3" type="submit" value="Regresa">Regresar a la Pagina Principal</button>
+			</form>
+			</div>
+		<br>
+		</div>
+	</body>
+</html>

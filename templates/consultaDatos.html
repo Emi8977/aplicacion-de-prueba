@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<link rel="stylesheet" href="{{url_for('static', filename='estilo3.css')}}">
+
+		<title>Buscador de Datos</title>
+	</head>
+
+	<body id="cuerpo" align="center">
+		
+		<div align="center">
+			<h1 id="titulo">Consulta</h1>
+		</div>
+		
+		<div  align="center">	
+			<form id="caja_relleno" action="/preguntar" method="GET">
+				
+				<h3 id="texto2" >Ingrese el Nombre del Lenguaje a consultar</h3>
+				<br>
+				<input id="texto5" type="text" name="n" placeholder="Nombre">
+				<br>
+				<br>
+				<br>
+				<button id="consultar" type="submit" value="Enviar Consulta">Enviar consulta</button>
+
+			</form>
+		</div>	
+		
+		
+		<div align="center">
+			<div id="caja2" >		
+				<label id="texto3" name="result">Descripcion:
+					<br>
+					{% if enfoque and traductor %}
+						<label id="texto3">Enfoque: {{ enfoque }}</label>
+						<br>
+						<label id="texto3">Traductor: {{ traductor }}</label>
+					{% else %}
+						<p id="texto3">{{ resultado }}</p>
+					{% endif %}
+					</label>
+			</div>
+		</div>
+			<br>
+			<br>
+			<div align="center">
+				<form action="/" method="get">
+					<button id="texto4" type="submit" value="Regresa">Regresar a la Pagina Principal</button>
+				</form>
+			</div>
+	</body>
+</html>

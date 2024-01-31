@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<title>Pagina principal</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='estilo1.css')}}">
+		
+	</head>
+
+	<body>
+		<div id="cuerpo" align="center">
+			<div id="titulo" align="center">
+				<h1 id="texto" align="center">Lenguajes de Programacion</h1>
+			</div>
+			
+			<div id="caja_botonera" align="center">
+				<p id="cajita" align="center">
+					<form  id="formulario"  action="/cargarDatos" method="get">
+						<button id="ingresar" type="submit" value="Ingresar"> Ingresar Dato</button>
+					</form>
+					<br>
+					<form id="formulario" action="/consultarDatos" method="post">
+						<button id="consultar" type="submit" value="Consultar"> Consultar algun Dato</button>
+					</form>
+					<br>
+					<form  id="formulario" action="/lista" method="get">
+						<button id="borrar" type="submit" value="Mostrar"> Mostrar lista de Datos</button>
+					</form>
+				</p>
+			</div>
+		</div>
+		<br>
+		<br><br>
+			
+			
+			
+		<br><br>		
+			
+	</body>
+</html>

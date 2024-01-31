@@ -1,0 +1,61 @@
+*{
+    background: #574c4c;
+	margin: 0;
+	padding: 0;
+}
+#cuerpo{
+    
+	
+	margin: 0;
+	padding: 10mm;
+}
+
+#titulo{
+   
+    padding: 4%;
+    width: 30%;
+    color: white;
+    background: #a59393;
+}
+#titulo2{
+    padding: 4%;
+    width: 30%;
+    color: white;
+    background: #443232;
+}
+
+/*cuafrado gris oscuro*/
+#caja_relleno{
+    padding: 4%;
+    width: 30%;
+    color: white;
+    background: #241b1b;
+}
+
+#texto2{
+    padding: 0%;
+    
+    color: white;
+    background: #241b1b;
+}
+
+#caja2{
+    padding: 4%;
+    width: 30%;
+    color: white;
+    background: #a59393;
+}
+#consultar{
+    color: white;
+    background: #0e0c0c;
+}
+
+#texto3{
+   
+    color: white;
+    background: #a59393;
+}
+#texto4{
+    color: white;
+    background: #0e0c0c;
+}
